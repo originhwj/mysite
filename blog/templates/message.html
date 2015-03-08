@@ -1,0 +1,23 @@
+{% extends "test.html" %}
+{% block content %}
+<form action="/blog/search/" enctype = "multipart/form-data" method="POST">
+<fieldset>
+        {% csrf_token %}
+{#        <input type="text" name="q">#}
+{#        <input type="submit" value="Search">#}
+    <table>
+        {{ form.as_table }}
+{#    {% for field in form %}#}
+{#      <div>#}
+{#         {{ field.label_tag }}:{{ field }}#}
+{#         {{ field.errors }}#}
+{#      </div>#}
+{#    {% endfor %}#}
+        <label class="element"><strong>Model Selceted:</strong></label>
+		<label><input type="radio" name="func" value="Softmax"/>Softmax model</label>
+		<label><input type="radio" name="func" value="Hex" checked="checked"/> Hex model</label>
+    </table>
+    <div><p><input type="submit" value="submit" /></p></div>
+</fieldset>
+  </form>
+{% endblock %}

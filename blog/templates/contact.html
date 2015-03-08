@@ -1,0 +1,16 @@
+{% extends "test.html" %}
+{% block content %}
+{% load staticfiles %}
+    <img  class="img-thumbnail" alt="image" src="{{ im.image.url }}" />
+{% for obj in obj_list %}
+{#<img  class="img-thumbnail" alt="image" src="{% static "image/1.jpg" %}" />#}
+    <p>{{ obj.title}}</p>
+    <img  class="img-thumbnail" alt="image" src="{{ obj.image.url }}" />
+{% endfor%}
+{#    <form action="#" method="post" enctype="multipart/form-data">{% csrf_token %}#}
+{#          <p>#}
+{#          <input id="id_image" type="file" class="" name="image">#}
+{#          </p>#}
+{#          <input type="submit" value="Submit" />#}
+{#    </form>#}
+{% endblock %}

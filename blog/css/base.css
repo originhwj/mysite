@@ -1,0 +1,22 @@
+
+body{
+    color:#efd;
+    background-image: url("background.png");
+    padding:0 5em;
+    margin:0
+}
+
+h1{
+    padding:2em 1em;
+    background:#675
+}
+
+h2{
+    color:#bf8;
+    border-top:1px dotted #fff;
+    margin-top:2em
+}
+
+p{
+    margin:lem 0
+}

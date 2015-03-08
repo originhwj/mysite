@@ -1,0 +1,10 @@
+{% extends "test.html" %}
+{% block content %}
+    <img  class="img-thumbnail" alt="image" src="/static/image/1.jpg" />
+{% for form in forms %}
+    <p>
+    {{ form.id }}
+    </p>
+       <img  class="img-thumbnail" alt="image" src="{{ form.image.url }}" />
+{% endfor %}
+{% endblock %}

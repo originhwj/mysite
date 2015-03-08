@@ -1,0 +1,20 @@
+{% extends "test.html" %}
+{% block content %}
+    <p> using method: {{ md }} </p>
+    <div style="margin-right: 15px;">
+    <P>
+    <img  class="img-thumbnail" alt="image" src="{{ im }} " style="width: 168px;height: 168px;float: left;margin-right: 20px"/></P>
+    </div>
+    <div style="margin-left: 15px;">
+    <p>polo衫</p>
+    <p>立领</p>
+    <p>七分袖</p>
+    <p>图案</p>
+    </div>
+    <div>
+    <p>简单推荐：</p>
+    {% for jp in imlist %}
+         <img  class="img-thumbnail" alt="image" src="{{ jp }} " style="width:128px;height: 128px;margin-right: 20px"/>
+    {% endfor %}
+    </div>
+{% endblock %}

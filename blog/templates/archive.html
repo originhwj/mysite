@@ -1,0 +1,15 @@
+{% extends "test.html" %}
+{% block content %}
+{#{% for post in posts %}#}
+<h2 style="clear: both;padding-top: 20px">{{ post.title}} </h2>
+{% load staticfiles %}
+<img data-src="holder.js/256x256" class="img-thumbnail" alt="image" src="{% static "image/1.jpg" %}" style="float: left;">
+<p>{{ post.timestamp|date}}</p>
+<p>{{ post.body}}</p>
+{#<p>{{ post.id}}</p>#}
+{#{% endfor%}#}
+{% endblock %}
+
+{#<html>#}
+{#hello#}
+{#</html>#}
